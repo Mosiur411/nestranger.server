@@ -2,10 +2,9 @@ const multer = require('multer');
 const path = require('path');
 
 
-// Temporary storage for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'public/uploads/'); // Store files in 'uploads' folder temporarily
+        cb(null, 'uploads/'); 
     },
     filename: (req, file, cb) => {
         cb(null, `${Date.now()}-${file.originalname}`);

@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.send('Hello World!1')
 })
-app.use('/uploads', express.static('public/uploads'));
+app.use('/uploads', express.static('public'));
 app.use('/v1/proprietaries', proprietariesrouter)
 app.use('/v1/booking', bookingrouter)
 
